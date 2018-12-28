@@ -23,6 +23,14 @@ in.Deinitialize() {
 
 }
 
+in.ConnectToMysql() {
+
+}
+
+in.DesconnectFromMysql() {
+
+}
+
 // ----------------------------------------------------------
 
 /*
