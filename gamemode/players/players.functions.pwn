@@ -32,7 +32,7 @@ in.Deinitialize() {
 in.Clear(player, bool:init) {
 	if (!init)
 		return;
-	
+
 	Player.Connected = false;
 	Player.Skin = this.DefaultSkin;
 }
