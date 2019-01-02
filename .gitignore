@@ -3,6 +3,7 @@
 *.amx
 *.lst
 *.asm
+*.atom-build.json
 
 # Vendor directory for dependencies
 dependencies/

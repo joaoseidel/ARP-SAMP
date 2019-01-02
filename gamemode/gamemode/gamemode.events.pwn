@@ -9,7 +9,7 @@
 cl.Init() {
 	log(@Init, "Initializing...");
 
-	this.Initialize();
+	this.Initialize(); // always first
 	players.Initialize();
 
 	log(@Init, "Initializing is complited.");
@@ -20,9 +20,9 @@ cl.Exit() {
 	log(@Exit, "Shut down...");
 
 	players.Deinitialize();
-	this.Deinitialize();
+	this.Deinitialize(); // always last one
 
-	log(@Exit, "Exited.")
+	log(@Exit, "Exited.");
 	return 0;
 }
 

@@ -7,28 +7,29 @@
 
 // ----------------------------------------------------------
 
-cl.Connect(player)
-{
+cl.Connect(player) {
+	TogglePlayerSpectating(player, true); // hide Spawn button
+
 	Player.Connected = true;
 	Player.Skin = random(300);
 }
 
-cl.Spawn(player)
-{
+cl.Spawn(player) {
+	log(@Spawn, "player = %d", player);
+
+	TogglePlayerSpectating(player, false); // 
+
 	SetPlayerSkin(player, Player.Skin);
 	return 1;
 }
 
-cl.RequestClass(player, classid)
-{
+cl.RequestClass(player, classid) {
 	log(@RequestClass, "player = %d, classid = %d", player, classid);
 	return 0;
 }
 
-cl.Disconnect(player, reason)
-{
-	if(!Player.Connected)
-	{
+cl.Disconnect(player, reason) {
+	if(!Player.Connected) {
 		return 0;
 	}
 
@@ -40,33 +41,29 @@ cl.Disconnect(player, reason)
 
 // ----------------------------------------------------------
 
-cl.Update(player)
-{
+cl.Update(player) {
 	return 1;
 }
 
-cl.Death(player, killerid, reason)
-{
-	log(@Death, "player = %d", player);
+cl.Death(player, killerid, reason) {
+	log(@Death, "player = %d, killer = %d, reason = %d", player, killerid, reason);
 }
 
 // ----------------------------------------------------------
 
-cl.CommandText(player, cmdtext[])
-{
+cl.CommandText(player, cmdtext[]) {
 	return 1;
 }
 
-cl.KeyStateChange(player, newkeys, oldkeys)
-{
+cl.KeyStateChange(player, newkeys, oldkeys) {
 	return 1;
 }
 
 // ----------------------------------------------------------
 
 /*
-	����� �����
+	- End
 */
-
+	
 #undef one
 #undef class
