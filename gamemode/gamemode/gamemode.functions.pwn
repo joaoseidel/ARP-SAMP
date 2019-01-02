@@ -14,8 +14,10 @@ in.Initialize() {
 	this.version[2] = VERSION_FIXES;
 
 	new string[32];
-	format(string, sizeof(string), "%s v%s.%s.%s", this.shortcut, this.version[0], this.version[1], this.version[2]);
-	SetGameModeText(this.name);
+	format(string, sizeof(string), "hostname %s", this.name);
+	SendRconCommand(string);
+	format(string, sizeof(string), "%s v%i.%i.%i", this.shortcut, this.version[0], this.version[1], this.version[2]);
+	SetGameModeText(string);
 	format(string, sizeof(string), "language %s", this.language);
 	SendRconCommand(string);
 	format(string, sizeof(string), "mapname %s", this.mapname);
@@ -46,7 +48,7 @@ in.ConnectToMysql(const host[], const user[], const password[], const dbname[]) 
 	this.mysql = mysql_connect(host, user, password, dbname, option_id);
 
 	if (this.mysql == MYSQL_INVALID_HANDLE || mysql_errno(this.mysql) != 0)	{
-		err(@Mysql, "Failed to connect");
+		err(@Mysql, "Failed to connect.");
 		SendRconCommand("exit");
 		return;
 	}
@@ -55,9 +57,9 @@ in.ConnectToMysql(const host[], const user[], const password[], const dbname[]) 
 }
 
 in.DesconnectFromMysql() {
-	log(@Mysql, "Desconnecting...");
+	log(@Mysql, "Disconnecting...");
 	mysql_close(this.mysql);
-	log(@Mysql, "Desconnected.");
+	log(@Mysql, "Disconnected.");
 }
 
 // ----------------------------------------------------------
