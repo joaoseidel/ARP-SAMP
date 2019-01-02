@@ -17,7 +17,7 @@ cl.Connect(player) {
 cl.Spawn(player) {
 	log(@Spawn, "player = %d", player);
 
-	TogglePlayerSpectating(player, false); // 
+	TogglePlayerSpectating(player, false); //
 
 	SetPlayerSkin(player, Player.Skin);
 	return 1;
@@ -64,6 +64,6 @@ cl.KeyStateChange(player, newkeys, oldkeys) {
 /*
 	- End
 */
-	
+
 #undef one
 #undef class
