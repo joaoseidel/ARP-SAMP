@@ -10,6 +10,7 @@
 // ----------------------------------------------------------
 
 in.Initialize() {
+	log(@Initialize, "Initializing...");
 	/*!
 		- Set global sets
 	*/
@@ -18,15 +19,21 @@ in.Initialize() {
 	this.for {
 		player.Clear(true);
 	}
+
+	log(@Initialize, "Initialized.");
 }
 
 in.Deinitialize() {
+	log(@Deinitialize, "Exiting...");
+
 	this.for {
 		if(!Player.Connected)
 			continue;
 
 		player.@Disconnect(0);
 	}
+
+	log(@Deinitialize, "Exited.");
 }
 
 in.Clear(player, bool:init) {
