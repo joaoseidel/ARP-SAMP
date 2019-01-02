@@ -20,8 +20,7 @@
 #define CLASS_NAME Players
 #define CLASS_DATA Player
 
-en(Data)
-{
+en(Data) {
 	i.Connected;
 	#define Player_@Connected		Player_Connected]
 	
@@ -55,7 +54,7 @@ nw[MAX_PLAYERS]{Data};
 // ----------------------------------------------------------
 
 /*
-	Конец файла
+	- End
 */
 
 #undef class

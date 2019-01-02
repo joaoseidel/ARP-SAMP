@@ -9,53 +9,38 @@
 
 // ----------------------------------------------------------
 
-is.Initialize() {
+in.Initialize() {
 	/*!
 		- Set global sets
 	*/
 
-	DisableInteriorEnterExits();
-	EnableStuntBonusForAll(0);
-	ShowPlayerMarkers(1);
-	ShowNameTags(0);
-	UsePlayerPedAnims();
 
-	/*!
-		- ������� ������ �������
-	*/
-
-	this.for
-	{
+	this.for {
 		player.Clear(true);
 	}
 }
 
-is.Deinitialize() {
+in.Deinitialize() {
 	this.for {
 		if(!Player.Connected)
-		{
 			continue;
-		}
 
 		player.@Disconnect(0);
 	}
 }
 
-// ----------------------------------------------------------
-
-is.Clear(player, bool:init) {
+in.Clear(player, bool:init) {
+	if (!init)
+		return;
+	
 	Player.Connected = false;
 	Player.Skin = this.DefaultSkin;
 }
 
 // ----------------------------------------------------------
 
-
-
-// ----------------------------------------------------------
-
 /*
-	����� �����
+	- End
 */
 
 #undef one
