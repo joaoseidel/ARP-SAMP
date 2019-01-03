@@ -31,7 +31,8 @@ en(Data) {
 	s.Username[MAX_PLAYER_NAME];
 	#define Player_@Username		Player_Username]
 
-	s.Password[MAX_PASSWORD_LENGHT]; // inacessável, por isso não tem define;
+	s.Password[MAX_PASSWORD_LENGHT];
+	#define Player_@Password		Player_Password]
 
 	s.Email[MAX_EMAIL_LENGHT];
 	#define Player_@Email		Player_Email]
