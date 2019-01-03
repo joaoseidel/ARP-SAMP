@@ -36,7 +36,11 @@ main() return;
 #define fp.%0(%1)		forward float:%0(%1); public float:%0(%1)
 #define bp.%0(%1)		forward bool:%0(%1); public bool:%0(%1)
 
+//-----------------------------------------------------------
+
 #include "gamemode/global.pwn"
+
+//-----------------------------------------------------------
 
 #undef in
 #undef tn
@@ -70,6 +74,10 @@ main() return;
 
 // ----------------------------------------------------------
 
+/*
+	- Vars
+*/
+
 #include "gamemode/gamemode/gamemode.vars.pwn"
 #include "gamemode/players/players.vars.pwn"
 
@@ -82,6 +90,10 @@ main() return;
 #undef	f
 
 // ----------------------------------------------------------
+
+/*
+	- Macros
+*/
 
 #include "gamemode/gamemode/gamemode.macro.pwn"
 #include "gamemode/players/players.macro.pwn"
@@ -109,8 +121,16 @@ main() return;
 
 #define case.%0:	case %0.@:
 
+//-----------------------------------------------------------
+
+/*
+	- Functions
+*/
+
 #include "gamemode/gamemode/gamemode.functions.pwn"
 #include "gamemode/players/players.functions.pwn"
+
+//-----------------------------------------------------------
 
 #undef in
 #undef tn
@@ -126,6 +146,8 @@ main() return;
 #undef tp
 #undef fp
 #undef bp
+
+//-----------------------------------------------------------
 
 #define in.%0(%1)		class.@%0(%1)
 #define tn.%0:%1(%2)	%0:class.@%1(%2)
@@ -144,8 +166,16 @@ main() return;
 
 #define cl.%0(%1)	public class.@%0(%1)
 
+//-----------------------------------------------------------
+
+/*
+	- Events
+*/
+
 #include "gamemode/gamemode/gamemode.events.pwn"
 #include "gamemode/players/players.events.pwn"
+
+//-----------------------------------------------------------
 
 #undef in
 #undef tn
@@ -163,6 +193,8 @@ main() return;
 #undef bp
 
 #undef cl
+
+//-----------------------------------------------------------
 
 #define in.%0(%1)		%0(%1)
 #define tn.%0:%1(%2)	%0:%1(%2)
