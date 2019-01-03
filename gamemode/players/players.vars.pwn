@@ -6,7 +6,8 @@
 
 // ----------------------------------------------------------
 
-#define b_DefaultSkin 0
+#define MAX_PASSWORD_LENGHT (64)
+#define MAX_EMAIL_LENGHT (64)
 
 // ----------------------------------------------------------
 
@@ -21,32 +22,38 @@
 #define CLASS_DATA Player
 
 en(Data) {
-	i.Connected;
+	i.UID;
+	#define Player_@UID		Player_UID]
+
+	b.Connected;
 	#define Player_@Connected		Player_Connected]
 
-	i.Name[MAX_PLAYER_NAME + 1];
-	i.Name_Length;
-	#define Player_@Name			Player_Name]
-	#define Player_Name_@Length		Player_Name_Length]
-	#define Player_Name].			Player_Name_@
+	s.Username[MAX_PLAYER_NAME];
+	#define Player_@Username		Player_Username]
 
-	i.Skin;
-	#define Player_@Skin			Player_Skin]
+	s.Password[MAX_PASSWORD_LENGHT]; // inacessável, por isso não tem define;
 
-	f.Pos[4];
-	#define Player_@Pos				Player_Pos]
-	#define Player_Pos_@X			Player_Pos][0]
-	#define Player_Pos_@Y			Player_Pos][1]
-	#define Player_Pos_@Z			Player_Pos][2]
-	#define Player_Pos_@R			Player_Pos][3]
-	#define Player_Pos].			Player_Pos_@
+	s.Email[MAX_EMAIL_LENGHT];
+	#define Player_@Email		Player_Email]
+
+	i.ActiveCharacterUID;
+	#define Player_@ActiveCharacterUID		Player_ActiveCharacterUID]
+
+	i.MaxCharacters;
+	#define Player_@MaxCharacters		Player_MaxCharacters]
+
+	i.Admin;
+	#define Player_@Admin		Player_Admin]
+
+	i.LastLogin;
+	#define Player_@LastLogin		Player_LastLogin]
 }
 nw[MAX_PLAYERS]{Data};
 
 #undef	Players
 #undef	Player
-#define Players[%0].		Players[%0][Player_@
-#define	Player				Players[player]
+
+#define Players.Var[%0][%1] Players[%0][Player_%1]
 
 #undef	CLASS_NAME
 #undef	CLASS_DATA
