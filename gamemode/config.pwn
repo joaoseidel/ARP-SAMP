@@ -20,8 +20,7 @@ new
     gamemode.shortcut[] = "ARP",
     gamemode.language[] = "Português Brasil",
     gamemode.mapname[] = "San Andreas",
-    gamemode.weburl[] = "www.aroeira-samp.com",
-    gamemode.version[3];
+    gamemode.weburl[] = "www.aroeira-samp.com";
 
 new MySQL:gamemode.mysql;
 
