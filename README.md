@@ -64,9 +64,24 @@ O nosso SOA (System-oriented Approach) utiliza uma syntax diferente da oficial d
   ```
   new this.variavel, this.variavel2[16]; // dentro do seu sistema você pode utilizar this para invocar o objeto.
   ```
-* Manipulando seu enum:
+* Manipulando seu enum e variáveis:
   - Após a declaração do seu **enum**, o processo de manipulação é bem simples.
-    1. Existem duas maneiras de tratar, a primeira é quando você precisa 
-  ```
-  
-  ```
+    1. Existem duas maneiras de tratar as variáveis, a primeira é quando você precisa utilizar dados do seu enumerador:
+    ```
+      (sistema).Vars[index][propriedade]
+      por exemplo:
+      houses.Vars[house][Integer]
+    ```
+    2. Outra situação é quando você precisa apenas de variáveis normais:
+    ```
+      criada no vars.pwn:
+      new this.exemplo;
+      
+      utilizada dentro da pasta do sistema:
+      this.exemplo
+      
+      utilizada fora:
+      (sistema).variavel
+      houses.exemplo
+      
+    ```
