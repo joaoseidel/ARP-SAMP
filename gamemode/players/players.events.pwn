@@ -1,5 +1,4 @@
 #define class players
-#define one player
 
 /*
 	Players -> Events
@@ -39,5 +38,4 @@ cl.Disconnect(playerid, reason) {
 	- End
 */
 
-#undef one
 #undef class

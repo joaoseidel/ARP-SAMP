@@ -64,9 +64,6 @@ main() return;
 // ----------------------------------------------------------
 
 #define this		class
-#define thi			one
-#define This		Class
-#define Thi			One
 
 // ----------------------------------------------------------
 
