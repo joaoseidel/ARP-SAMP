@@ -1,7 +1,4 @@
 #define class players
-#define Class Players
-#define one player
-#define One Player
 
 /*
 	Players -> Functions
@@ -21,7 +18,7 @@ in.Deinitialize() {
 		if (Players.Var[i][Connected])
 			continue;
 
-		class.@Disconnect(i, 0);
+		this.@Disconnect(i, 0);
 	}
 
 	log(@Deinitialize, "Exited.");
@@ -41,5 +38,4 @@ in.Clear(playerid) {
 	- End
 */
 
-#undef one
 #undef class
