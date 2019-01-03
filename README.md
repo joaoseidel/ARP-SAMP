@@ -54,7 +54,7 @@ O nosso SOA (System-oriented Approach) utiliza uma syntax diferente da oficial d
   ```
   en(Data) {
    i.Integer, // i. é usado para definir um inteiro.
-   i.String[16], // i. também é usado para definir uma string, onde 16 é o length.
+   s.String[16], // s. é usado para definir uma string, onde 16 é o length.
    b.Boolean, // b. é usado para definir uma booleana.
    f.Float // f. é usado para definir um valor flutuante .
   }
