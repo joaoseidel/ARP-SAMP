@@ -64,3 +64,9 @@ O nosso SOA (System-oriented Approach) utiliza uma syntax diferente da oficial d
   ```
   new this.variavel, this.variavel2[16]; // dentro do seu sistema você pode utilizar this para invocar o objeto.
   ```
+* Manipulando seu enum:
+  - Após a declaração do seu **enum**, o processo de manipulação é bem simples.
+    1. Existem duas maneiras de tratar, a primeira é quando você precisa 
+  ```
+  
+  ```
