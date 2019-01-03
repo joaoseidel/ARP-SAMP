@@ -40,9 +40,9 @@ Creative Commons Legal Code
  * Esta é a estrutura principal do seu sistema e você deverá desenvolver a partir dela. Abaixo explicarei como montar e estruturar seu sistema, começando pela definição de variáveis:
  
  - Implementação:
-   1. Após a criação dos arquivos necessários, você deverá importar todos os arquivos no core, seguindo a sequência: vars.pwn, macro.pwn, functions.pwn e events.pwn.
-   2. Navegar no arquivo classes.pwn, e declarar em ordem alfabética e númerica o seu sistema.
-   3. Pronto! Seu sistema já está integrado ao projeto e tudo deverá funcionar normalmente, caso você precise executar algo ao iniciar ou desligar o servidor, sua integração deverpa ser feita no seguinte arquivo: gamemode/gamemode.events.pwn;
+   1. Navegar no arquivo classes.pwn, e declarar em ordem alfabética e númerica o seu sistema.
+   2. Após a criação dos arquivos necessários, você deverá importar todos os arquivos no core, seguindo a sequência: vars.pwn, macro.pwn, functions.pwn e events.pwn em suas devidas seções, importando conforme a ordem numérica foi definida no classes.pwn;
+   3. Pronto! Seu sistema já está integrado ao projeto e tudo deverá funcionar normalmente, caso você precise executar algo ao iniciar ou desligar o servidor, sua integração deverá ser feita no seguinte arquivo: gamemode/gamemode.events.pwn;
 
 ### vars.pwn
 > Dentro de um sistema, o arquivo _vars.pwn_ é encarregado pelo tratamento e definições de variáveis, assim como enumeradores e arrays.
