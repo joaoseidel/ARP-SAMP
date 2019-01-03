@@ -7,56 +7,30 @@
 
 // ----------------------------------------------------------
 
-cl.Connect(player) {
-	TogglePlayerSpectating(player, true); // hide Spawn button
+cl.Connect(playerid) {
+	TogglePlayerSpectating(playerid, false); // hide Spawn button
 
-	Player.Connected = true;
-	Player.Skin = random(300);
+	Players.Var[playerid][Connected] = true;
 }
 
-cl.Spawn(player) {
-	log(@Spawn, "player = %d", player);
-
+cl.Spawn(playerid) {
 	TogglePlayerSpectating(player, false); //
-
-	SetPlayerSkin(player, Player.Skin);
 	return 1;
 }
 
-cl.RequestClass(player, classid) {
-	log(@RequestClass, "player = %d, classid = %d", player, classid);
-	return 0;
-}
-
-cl.Disconnect(player, reason) {
-	if(!Player.Connected) {
+cl.RequestClass(playerid, classid) {
+	if (!Players.Var[playerid][Connected])
 		return 0;
-	}
 
-	log(@Disconnect, "player = %d, reason", player, reason);
+	return 1;
+}
 
-	thi.Clear(false);
+cl.Disconnect(playerid, reason) {
+	if (!Players.Var[playerid][Connected])
+		return 0;
+
+	this.Clear(player);
 	return 0;
-}
-
-// ----------------------------------------------------------
-
-cl.Update(player) {
-	return 1;
-}
-
-cl.Death(player, killerid, reason) {
-	log(@Death, "player = %d, killer = %d, reason = %d", player, killerid, reason);
-}
-
-// ----------------------------------------------------------
-
-cl.CommandText(player, cmdtext[]) {
-	return 1;
-}
-
-cl.KeyStateChange(player, newkeys, oldkeys) {
-	return 1;
 }
 
 // ----------------------------------------------------------

@@ -11,37 +11,28 @@
 
 in.Initialize() {
 	log(@Initialize, "Initializing...");
-	/*!
-		- Set global sets
-	*/
-
-
-	this.for {
-		player.Clear(true);
-	}
-
 	log(@Initialize, "Initialized.");
 }
 
 in.Deinitialize() {
 	log(@Deinitialize, "Exiting...");
 
-	this.for {
-		if(!Player.Connected)
+	for (i -> MAX_PLAYERS) {
+		if (Players.Var[i][Connected])
 			continue;
 
-		player.@Disconnect(0);
+		class.@Disconnect(i, 0);
 	}
 
 	log(@Deinitialize, "Exited.");
 }
 
-in.Clear(player, bool:init) {
-	if (!init)
-		return;
+// ----------------------------------------------------------
 
-	Player.Connected = false;
-	Player.Skin = this.DefaultSkin;
+
+in.Clear(playerid) {
+	Players.Var[playerid][UID] = -1;
+	Players.Var[playerid][Connected] = false;
 }
 
 // ----------------------------------------------------------
