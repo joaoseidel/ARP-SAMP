@@ -1,6 +1,6 @@
 # Aroeira Roleplay - SAMP
 
-Desenvolvendo um sistema:
+## Desenvolvendo um sistema:
 
  O desenvolvimento de um sistema dentro do ARP é seguido por um padrao estrutural que _deve_ ser respeitado.
  
@@ -20,7 +20,7 @@ Desenvolvendo um sistema:
    2. Navegar no arquivo classes.pwn, e declarar em ordem alfabética e númerica o seu sistema.
    3. Pronto! Seu sistema já está integrado ao projeto e tudo deverá funcionar normalmente, caso você precise executar algo ao iniciar ou desligar o servidor, sua integração deverpa ser feita no seguinte arquivo: gamemode/gamemode.events.pwn;
 
-## vars.pwn
+### vars.pwn
 > Dentro de um sistema, o arquivo _vars.pwn_ é encarregado pelo tratamento e definições de variáveis, assim como enumeradores e arrays.
 
 O nosso SOA (System-oriented Approach) utiliza uma syntax diferente da oficial do pawn, justamente para temos a modularização sem se preocupar com a sequência e ordenação de um sistema e cada módulo (vars, functions, macro e events possuem suas individualidades).
