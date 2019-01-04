@@ -27,6 +27,9 @@ en(Data) {
    b.Connected;
    #define Character_@Connected   Character_Connected]
 
+   i.ConnectedPlayerid;
+   #define Character_@ConnectedPlayerid     Character_ConnectedPlayerid]
+
    s.Name[MAX_PLAYER_NAME];
    #define Character_@Name    Character_Name]
 

@@ -18,6 +18,14 @@ in.Initialize() {
 
 in.Deinitialize() {
 	log(@Deinitialize, "Exiting...");
+
+	for (characterid -> MAX_CHARACTERS) {
+		if (!Chars.Var[characterid][Connected])
+			continue;
+			
+		players.@Disconnect(Chars.Var[characterid][ConnectedPlayerid], PLAYER_DISCONNECTED_KICK_BAN);
+	}
+
 	log(@Deinitialize, "Exited.");
 }
 
