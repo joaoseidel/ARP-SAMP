@@ -80,7 +80,7 @@ nw[MAX_CHARACTERS]{Data};
 #undef	Characters
 #undef	Character
 
-#define Chars.Var[%0][%1] Characters[%0][Character_%1]
+#define Chars.Var[%0][%1] Characters[%0][Character_@%1
 
 #undef	CLASS_NAME
 #undef	CLASS_DATA

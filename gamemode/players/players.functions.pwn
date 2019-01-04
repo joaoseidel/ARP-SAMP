@@ -14,7 +14,7 @@ in.Initialize() {
 in.Deinitialize() {
 	log(@Deinitialize, "Exiting...");
 
-	foreach (Player, i) {
+	foreach(new i : Player) {
 		this.@Disconnect(i, 0);
 	}
 
