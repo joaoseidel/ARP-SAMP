@@ -36,8 +36,13 @@ en(Data) {
    i.Skin;
    #define Character_@Skin    Character_Skin]
 
-   f.Position[4];
-   #define Character_@Pos   Character_Position]
+   f.Pos[4];
+   #define Character_@Pos				Character_Pos]
+   #define Character_Pos_@X			Character_Pos][0]
+   #define Character_Pos_@Y			Character_Pos][1]
+   #define Character_Pos_@Z			Character_Pos][2]
+   #define Character_Pos_@R			Character_Pos][3]
+   #define Character_Pos].			Character_Pos_@
 
    i.VirtualWorld;
    #define Character_@VirtualWorld    Character_VirtualWorld]
@@ -78,12 +83,12 @@ en(Data) {
    i.Kills;
    #define Character_@Kills     Character_Kills]
 }
-nw[MAX_CHARACTERS]{Data};
+nw[MAX_PLAYERS][MAX_CHARACTERS]{Data};
 
 #undef	Characters
 #undef	Character
 
-#define Chars.Var[%0][%1] Characters[%0][Character_@%1
+#define Chars.Var[%0][%1][%2] Characters[%0][%1][Character_@%2
 
 #undef	CLASS_NAME
 #undef	CLASS_DATA

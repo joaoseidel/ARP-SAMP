@@ -37,6 +37,9 @@ en(Data) {
 	s.Email[MAX_EMAIL_LENGHT];
 	#define Player_@Email		Player_Email]
 
+	i.ActiveCharacterID;
+	#define Player_@ActiveCharacter		Player_ActiveCharacterID]
+
 	i.ActiveCharacterUID;
 	#define Player_@ActiveCharacterUID		Player_ActiveCharacterUID]
 
