@@ -31,6 +31,7 @@
 #include <a_mysql>
 #include <mhooks>
 #include <strlib>
+#include <foreach>
 #include <streamer>
 #include <Pawn.CMD>
 
