@@ -14,10 +14,7 @@ in.Initialize() {
 in.Deinitialize() {
 	log(@Deinitialize, "Exiting...");
 
-	for (i -> MAX_PLAYERS) {
-		if (Players.Var[i][Connected])
-			continue;
-
+	foreach (Player, i) {
 		this.@Disconnect(i, 0);
 	}
 
