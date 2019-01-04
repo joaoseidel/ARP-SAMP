@@ -29,6 +29,10 @@
 
 #include <a_samp>
 #include <a_mysql>
+#include <mhooks>
+#include <strlib>
+#include <streamer>
+#include <Pawn.CMD>
 
 // ---------------------------------------------------------- // The Core
 
