@@ -7,7 +7,8 @@
 // ----------------------------------------------------------
 
 in.Initialize() {
-	this.ConnectToMysql(MYSQL_HOST, MYSQL_USER, MYSQL_PASS, MYSQL_DBNM);
+	if (!this.ConnectToMysql(MYSQL_HOST, MYSQL_USER, MYSQL_PASS, MYSQL_DBNM))
+		return 0;
 
 	this.version[0] = VERSION_MAJOR;
 	this.version[1] = VERSION_MINOR;
@@ -32,6 +33,7 @@ in.Initialize() {
 	ShowNameTags(1);
 	SetNameTagDrawDistance(10.0);
 	UsePlayerPedAnims();
+	return 1;
 }
 
 in.Deinitialize() {
@@ -50,10 +52,11 @@ in.ConnectToMysql(const host[], const user[], const password[], const dbname[]) 
 	if (this.mysql == MYSQL_INVALID_HANDLE || mysql_errno(this.mysql) != 0)	{
 		err(@Mysql, "Failed to connect.");
 		SendRconCommand("exit");
-		return;
+		return 0;
 	}
 
 	log(@Mysql, "Connected.");
+	return 1;
 }
 
 in.DesconnectFromMysql() {
