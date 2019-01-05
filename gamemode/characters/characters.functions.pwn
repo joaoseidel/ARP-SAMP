@@ -7,7 +7,7 @@
 // ----------------------------------------------------------
 
 in.Initialize() {
-	log(@Initialize, "Initializing...");
+	log(@Init, "Initializing...");
 
 	foreach (new playerid : Player) {
 		for (i -> MAX_CHARACTERS) {
@@ -15,7 +15,7 @@ in.Initialize() {
 		}
 	}
 
-	log(@Initialize, "Initialized.");
+	log(@Init, "Initialized.");
 }
 
 in.Deinitialize() {

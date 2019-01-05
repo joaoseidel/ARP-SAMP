@@ -7,8 +7,8 @@
 // ----------------------------------------------------------
 
 in.Initialize() {
-	log(@Initialize, "Initializing...");
-	log(@Initialize, "Initialized.");
+	log(@Init, "Initializing...");
+	log(@Init, "Initialized.");
 }
 
 in.Deinitialize() {
