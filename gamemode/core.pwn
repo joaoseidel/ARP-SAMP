@@ -82,6 +82,7 @@ main() return;
 
 #include "gamemode/gamemode/gamemode.vars.pwn"
 #include "gamemode/players/players.vars.pwn"
+#include "gamemode/characters/characters.vars.pwn"
 
 // ----------------------------------------------------------
 
@@ -100,6 +101,7 @@ main() return;
 
 #include "gamemode/gamemode/gamemode.macro.pwn"
 #include "gamemode/players/players.macro.pwn"
+#include "gamemode/characters/characters.macro.pwn"
 
 //-----------------------------------------------------------
 
@@ -134,6 +136,7 @@ main() return;
 
 #include "gamemode/gamemode/gamemode.functions.pwn"
 #include "gamemode/players/players.functions.pwn"
+#include "gamemode/characters/characters.functions.pwn"
 
 //-----------------------------------------------------------
 
@@ -183,6 +186,7 @@ main() return;
 
 #include "gamemode/gamemode/gamemode.events.pwn"
 #include "gamemode/players/players.events.pwn"
+#include "gamemode/characters/characters.events.pwn"
 
 //-----------------------------------------------------------
 

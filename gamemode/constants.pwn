@@ -6,6 +6,12 @@
 
 // ----------------------------------------------------------
 
+#define PLAYER_DISCONNECTED_LOST (0) // timeouted or crashed
+#define PLAYER_DISCONNECTED_QUIT (1) // quitted (command or menu)
+#define PLAYER_DISCONNECTED_KICK_BAN (1) // kicked or banned
+
+#define INVALID_CHARACTER_ID (-1)
+
 #define BLACK	0x000000FF
 #define BLUE	0x5F5FFFFF
 #define BROWN	0xA52A2AFF
