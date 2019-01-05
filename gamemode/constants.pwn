@@ -8,7 +8,7 @@
 
 #define PLAYER_DISCONNECTED_LOST (0) // timeouted or crashed
 #define PLAYER_DISCONNECTED_QUIT (1) // quitted (command or menu)
-#define PLAYER_DISCONNECTED_KICK_BAN (1) // kicked or banned
+#define PLAYER_DISCONNECTED_KICK_BAN (2) // kicked or banned
 
 #define INVALID_CHARACTER_ID (-1)
 
