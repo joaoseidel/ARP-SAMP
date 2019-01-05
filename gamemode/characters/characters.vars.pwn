@@ -65,11 +65,11 @@ en(Data) {
    f.Armor;
    #define Character_@Armor     Character_Armor]
 
-   i.JobID;
-   #define Character_@Job@ID    Character_JobID]
-
-   i.JobCooldown;
-   #define Character_@Job@Cooldown    Character_JobCooldown]
+   i.Job[2];
+   #define Character_@Job             Character_Job]
+   #define Character_Job_@ID          Character_Job][0]
+   #define Character_Job_@Cooldown    Character_Job][1]
+   #define Character_Job].            Character_Job_@
 
    i.Bank;
    #define Character_@Bank    Character_Bank]
