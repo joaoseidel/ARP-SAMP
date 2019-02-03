@@ -73,6 +73,7 @@ main() return;
 #define s.%0;   CLASS_DATA.%0,
 #define b.%0;		bool:CLASS_DATA.%0,
 #define f.%0;		float:CLASS_DATA.%0,
+#define orm.%0;   ORM:CLASS_DATA.%0,
 
 // ----------------------------------------------------------
 
@@ -127,6 +128,14 @@ main() return;
 #define bp.%0(%1)		forward bool:class.%0(%1); public bool:class.%0(%1)
 
 #define case.%0:	case %0.@:
+
+// ----------------------------------------------------------
+
+/*
+	- Database management
+*/
+
+#include "gamemode/players/players.database.pwn"
 
 //-----------------------------------------------------------
 
@@ -208,6 +217,14 @@ main() return;
 #undef bp
 
 #undef cl
+
+// ----------------------------------------------------------
+
+/*
+	- Dialogs
+*/
+
+#include "gamemode/players/players.dialogs.pwn"
 
 //-----------------------------------------------------------
 

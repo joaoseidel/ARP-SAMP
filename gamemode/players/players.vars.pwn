@@ -6,11 +6,6 @@
 
 // ----------------------------------------------------------
 
-#define MAX_PASSWORD_LENGHT (64)
-#define MAX_EMAIL_LENGHT (64)
-
-// ----------------------------------------------------------
-
 /*!
 	- Players Static
 */
@@ -24,6 +19,9 @@
 en(Data) {
 	i.UID;
 	#define Player_@UID		Player_UID]
+
+	orm.ORM_ID; // mysql orm id
+	#define Player_@ORM			Player_ORM_ID]
 
 	b.Connected;
 	#define Player_@Connected		Player_Connected]

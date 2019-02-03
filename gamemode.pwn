@@ -28,9 +28,13 @@
 // ---------------------------------------------------------- // Libraries
 
 #include <a_samp>
+#undef MAX_PLAYERS
+#define MAX_PLAYERS (50)
 #include <a_mysql>
 #include <strlib>
+#include <dialogs>
 #include <foreach>
+#include <sscanf2>
 #include <streamer>
 #include <Pawn.CMD>
 

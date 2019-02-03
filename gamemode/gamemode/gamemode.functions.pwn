@@ -10,14 +10,10 @@ in.Initialize() {
 	if (!this.ConnectToMysql(MYSQL_HOST, MYSQL_USER, MYSQL_PASS, MYSQL_DBNM))
 		return 0;
 
-	this.version[0] = VERSION_MAJOR;
-	this.version[1] = VERSION_MINOR;
-	this.version[2] = VERSION_FIXES;
-
 	new string[32];
 	format(string, sizeof(string), "hostname %s", this.name);
 	SendRconCommand(string);
-	format(string, sizeof(string), "%s v%i.%i.%i", this.shortcut, this.version[0], this.version[1], this.version[2]);
+	format(string, sizeof(string), "%s v%i.%i.%i", this.shortcut, VERSION_MAJOR, VERSION_MINOR, VERSION_FIXES);
 	SetGameModeText(string);
 	format(string, sizeof(string), "language %s", this.language);
 	SendRconCommand(string);
@@ -29,9 +25,10 @@ in.Initialize() {
 	SetWorldTime(12);
 	DisableInteriorEnterExits();
 	EnableStuntBonusForAll(0);
-	ShowPlayerMarkers(PLAYER_MARKERS_MODE_OFF);
 	ShowNameTags(1);
+	ShowPlayerMarkers(PLAYER_MARKERS_MODE_OFF);
 	SetNameTagDrawDistance(10.0);
+	DisableNameTagLOS();
 	UsePlayerPedAnims();
 	return 1;
 }
